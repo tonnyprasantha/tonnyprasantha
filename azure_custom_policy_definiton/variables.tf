@@ -26,6 +26,7 @@ variable "policy_definitions" {
     type        = list (object({
       policy_name = string
       policy_type = string
+      policy_rule = string
       mode        = string
       policy_display_name = string
     }    )    )
