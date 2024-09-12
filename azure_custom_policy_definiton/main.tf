@@ -11,5 +11,5 @@ resource "azurerm_policy_definition" "policy" {
   policy_type  = each.value.policy_type
   mode         = each.value.mode
   display_name = each.value.policy_display_name
-  policy_rule  = file("policyrules.json")
+  policy_rule  = file(each.value.policy_rule)
 }
