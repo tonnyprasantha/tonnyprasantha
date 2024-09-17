@@ -29,6 +29,7 @@ variable "policy_definitions" {
       policy_rule = string
       mode        = string
       policy_display_name = string
+      policy_parameters   = string
     }    )    )
 
  }
