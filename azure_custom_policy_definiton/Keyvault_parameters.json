@@ -1,0 +1,72 @@
+{
+  "properties": {
+    "displayName": "Keyvault Diagnostic Settings",
+    "description": "Ensure Key Vault has diagnostic settings enabled.",
+    "policyType": "Custom",
+    "mode": "All",
+    "parameters": {
+      "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "DeployIfNotExists",
+          "Disabled"
+        ],
+        "defaultValue": "DeployIfNotExists"
+      },
+      "profileName": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Profile name",
+          "description": "The diagnostic settings profile name"
+        },
+        "defaultValue": "DATADOGTOEVENTHUB"
+      },
+      "eventHubRuleId": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Event Hub Authorization Rule Id",
+          "description": "The Event Hub authorization rule Id for Azure Diagnostics. The authorization rule needs to be at Event Hub namespace level."
+        }
+      },
+      "eventHubLocation": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Event Hub Location",
+          "description": "The location the Event Hub resides in. Only Public IPs in this location will be linked to this Event Hub."
+        },
+        "defaultValue": ""
+      },
+      "metricsEnabled": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Enable metrics",
+          "description": "Whether to enable metrics stream to the Event Hub - True or False"
+        },
+        "allowedValues": [
+          "True",
+          "False"
+        ],
+        "defaultValue": "False"
+      },
+      "logsEnabled": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Enable logs",
+          "description": "Whether to enable logs stream to the Event Hub - True or False"
+        },
+        "allowedValues": [
+          "True",
+          "False"
+        ],
+        "defaultValue": "True"
+      }
+    }
+  },
+  "versions": [
+    "1.0.0"
+  ]
+}
