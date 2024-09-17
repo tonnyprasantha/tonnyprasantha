@@ -1,42 +1,20 @@
 policy_definitions = [
 {
-policy_name = "myFirstvariablepolicy"
+policy_name = "Keyvault Diagnostic Settings"
 policy_type = "Custom"
 mode        = "Indexed"
-policy_display_name = "Firstvariablepolicy"
-policy_rule = "policyrules.json"
+policy_display_name = "Enable Keyvault Diagnostic Settings"
+policy_rule = "Keyvault_rule.json"
+policy_parameters = "Keyvault_parameters.json"
 },
 
 {
-policy_name = "mysecondvariablepolicy"
-policy_type = "Custom"
-mode        = "All"
-policy_display_name = "Secondvariablepolicy"
-policy_rule = "policyrules2.json"
-},
-
-{
-policy_name = "mythirdvariablepolicy"
-policy_type = "Custom"
-mode        = "All"
-policy_display_name = "Thirdvariablepolicy"
-policy_rule = "policyrules3.json"
-},
-
-{
-policy_name = "myfourthvariablepolicy"
+policy_name = "Public IP Diagnostic Settings"
 policy_type = "Custom"
 mode        = "Indexed"
-policy_display_name = "Fourthvariablepolicy"
-policy_rule = "policyrules4.json"
-},
-
-{
-policy_name = "myfifthvariablepolicy"
-policy_type = "Custom"
-mode        = "All"
-policy_display_name = "Fifthvariablepolicy"
-policy_rule = "policyrules5.json"
+policy_display_name = "Enable Public IP Diagnostic Settings"
+policy_rule = "PublicIP.json"
+policy_parameters = "PublicIP_parameters.json"
 }
 
 ]
