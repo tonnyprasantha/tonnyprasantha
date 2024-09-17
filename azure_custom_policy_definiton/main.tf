@@ -12,4 +12,5 @@ resource "azurerm_policy_definition" "policy" {
   mode         = each.value.mode
   display_name = each.value.policy_display_name
   policy_rule  = file(each.value.policy_rule)
+  parameters   = file(each.value.policy_parameters)
 }
